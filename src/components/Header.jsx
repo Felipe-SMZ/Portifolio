@@ -7,8 +7,8 @@ function Header() {
 
             <nav className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
                 {/* logo */}
-                <div className="text-white text-2xl font-bold flex items-center gap-2">
-                    <img src={minhaLogo} alt="Logo" className="w-24 h-24 object-cover border-2 border-purple-100 shadow-xl shadow-purple-500/50" />
+                <div className="text-white text-2xl font-bold flex items-center gap-8">
+                    <img src={minhaLogo} alt="Logo" className="w-24 h-24 object-cover border-8 border-purple-" />
                     Felipe Shimizu
                 </div>
 
