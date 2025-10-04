@@ -9,7 +9,7 @@ function Hero() {
                 <div className="flex justify-center">
                     <img
                         src={minhaFoto}
-                        alt="Felipe Shimizu"
+                        alt="Felipe"
                         className="w-96 h-96 rounded-full object-cover border-4 border-purple-500 shadow-2xl shadow-purple-500/50"
                     />
                 </div>
