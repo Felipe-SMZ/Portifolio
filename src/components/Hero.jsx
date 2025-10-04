@@ -1,3 +1,5 @@
+import minhaFoto from '../assets/img/Fot.jpg'
+
 function Hero() {
     return (
         <section id="sobre" className="min-h-screen flex items-center justify-center px-4">
@@ -5,9 +7,11 @@ function Hero() {
 
                 {/* Avatar/Foto */}
                 <div className="flex justify-center">
-                    <div className="w-100 h-100 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-8xl">
-                        <img className="w-200 h-200 rounded-full" src="./src/assets/img/Fot.jpg" alt="" />
-                    </div>
+                    <img
+                        src={minhaFoto}
+                        alt="Felipe Shimizu"
+                        className="w-96 h-96 rounded-full object-cover border-4 border-purple-500 shadow-2xl shadow-purple-500/50"
+                    />
                 </div>
 
                 {/* Textos */}
