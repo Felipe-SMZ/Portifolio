@@ -1,3 +1,5 @@
+import minhaLogo from '../assets/img/logo.png'
+
 function Header() {
     return (
         <header className="fixed top-0 left-0 w-full bg-gray-800 z-50">
@@ -5,7 +7,10 @@ function Header() {
 
             <nav className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
                 {/* logo */}
-                <div className="text-white text-2xl font-bold">Felipe Shimizu</div>
+                <div className="text-white text-2xl font-bold flex items-center gap-2">
+                    <img src={minhaLogo} alt="Logo" className="w-24 h-24 object-cover border-2 border-purple-100 shadow-xl shadow-purple-500/50" />
+                    Felipe Shimizu
+                </div>
 
                 {/* menu */}
                 <ul className="flex gap-8">
