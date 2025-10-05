@@ -44,7 +44,7 @@ function About() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                     <div className="bg-gray-900 p-6 rounded-xl text-center border border-gray-700 hover:border-purple-500 transition">
                         <div className="text-4xl font-bold text-purple-400 mb-2">1+</div>
-                        <div className="text-gray-400 text-sm">Ano Codando</div>
+                        <div className="text-gray-400 text-sm">Anos Codando</div>
                     </div>
 
                     <div className="bg-gray-900 p-6 rounded-xl text-center border border-gray-700 hover:border-purple-500 transition">

@@ -6,12 +6,17 @@ function Header() {
 
 
             <nav className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-                {/* logo */}
-                <div className="text-white text-2xl font-bold flex items-center gap-8">
-                    <img src={minhaLogo} alt="Logo" className="w-24 h-24 object-cover border-8" />
-                    Felipe Shimizu
+                {/* Logo + Nome */}
+                <div className="flex items-center gap-3">
+                    <img
+                        src={minhaLogo}
+                        alt="Felipe Shimizu"
+                        className="w-12 h-12 rounded-full object-cover"
+                    />
+                    <span className="text-white text-xl font-bold">
+                        Felipe Shimizu
+                    </span>
                 </div>
-
                 {/* menu */}
                 <ul className="flex gap-8">
                     <li>
