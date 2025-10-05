@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+Scroll suave
+html {
+  scroll-behavior: smooth;
+}
+
+/* Transição suave entre seções */
+section {
+  transition: background-color 0.3s ease;
+}

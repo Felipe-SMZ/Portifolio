@@ -1,6 +1,6 @@
 function About() {
     return (
-        <section id="sobre" className="py-20 px-4 bg-gray-800">
+        <section id="sobre" className="py-20 px-4 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-800">
             <div className="max-w-6xl mx-auto">
 
                 {/* Seção 1: Quem sou eu */}
