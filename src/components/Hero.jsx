@@ -2,7 +2,7 @@ import minhaFoto from '../assets/img/Fot.jpg'
 
 function Hero() {
     return (
-        <section id="sobre" className="min-h-screen flex items-center justify-center px-4">
+        <section id="hero" className="min-h-screen flex items-center justify-center px-4">
             <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
 
                 {/* Avatar/Foto */}
