@@ -14,7 +14,7 @@ function About() {
                         </h2>
                     </div>
 
-                    <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">
+                    <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto text-justify">
                         Olá! Meu nome é <span className="text-white font-semibold">Felipe Shimizu</span>,
                         sou apaixonado por tecnologia, criatividade e soluções inteligentes.
                         Gosto de transformar ideias em experiências digitais que façam sentido para as pessoas.
@@ -31,7 +31,7 @@ function About() {
                         </h2>
                     </div>
 
-                    <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto">
+                    <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto text-justify">
                         A programação entrou na minha vida como uma ferramenta poderosa para criar,
                         resolver problemas e expressar ideias. Gosto da lógica, da liberdade de construir
                         algo do zero e da possibilidade de impactar o mundo com linhas de código.
