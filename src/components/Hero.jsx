@@ -28,7 +28,7 @@ function Hero() {
                         Desenvolvedor Full Stack em formação
                     </h2>
 
-                    <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+                    <p className="text-gray-300 text-lg mb-8 leading-relaxed text-justify">
                         Transformo curiosidade em código e café em projetos. Estou em formação como
                         Desenvolvedor Full Stack, aprendendo a construir aplicações completas com Java,
                         Spring Boot e React. Sempre em busca de novos aprendizados e desafios.
