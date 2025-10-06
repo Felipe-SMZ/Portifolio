@@ -19,7 +19,7 @@ function Contact() {
                 </div>
 
                 {/* Cards de Contato */}
-                <div className="grid md:grid-cols-3 gap-6 mb-12">
+                <div className="grid md:grid-cols-2 gap-6 mb-12"> {/*mudar o cols-3 quando tiver email*/}
 
                     {/* Email
                     <a

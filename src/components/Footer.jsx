@@ -42,7 +42,7 @@ function Footer() {
                             <FaGithub className="mx-auto" />
                         </a>
                         <a
-                            href="https://linkedin.com/in/seu-perfil"
+                            href="https://www.linkedin.com/in/felipesshimizu/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-400 hover:text-purple-400 transition text-2xl"
