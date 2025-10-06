@@ -1,3 +1,5 @@
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 function Contact() {
     return (
         <section id="contato" className="py-20 px-4 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-800">
@@ -42,7 +44,7 @@ function Contact() {
                         className="bg-gray-900 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all hover:scale-105 text-center group"
                     >
                         <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
-                            💼
+                            <FaLinkedin className="mx-auto" />
                         </div>
                         <h3 className="text-xl font-bold mb-2">LinkedIn</h3>
                         <p className="text-gray-400 text-sm mb-2">Vamos conectar</p>
@@ -59,7 +61,7 @@ function Contact() {
                         className="bg-gray-900 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all hover:scale-105 text-center group"
                     >
                         <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
-                            🐙
+                            <FaGithub className="mx-auto" />
                         </div>
                         <h3 className="text-xl font-bold mb-2">GitHub</h3>
                         <p className="text-gray-400 text-sm mb-2">Veja meu código</p>

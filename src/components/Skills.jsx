@@ -1,31 +1,55 @@
+import {
+    FaReact,
+    FaJsSquare,
+    FaHtml5,
+    FaCss3Alt,
+    FaJava,
+    FaPython,
+    FaNodeJs,
+    FaGitAlt,
+    FaGithub,
+} from 'react-icons/fa';
+import {
+    SiTailwindcss,
+    SiPostgresql,
+    SiMysql,
+    SiMongodb,
+    SiVite,
+} from 'react-icons/si';
+
+
 function Skills() {
     const skills = [
         // Front-end
         {
             name: 'React',
             level: 'Básico',
-            icon: '⚛️',
+            icon: <FaReact className="text-cyan-400 text-6xl mx-auto" />,
             description: 'Componentes, Props, Hooks',
             category: 'Frontend'
         },
         {
             name: 'JavaScript',
             level: 'Básico',
-            icon: '🟨',
+            icon: <FaJsSquare className="text-yellow-400 text-6xl mx-auto" />,
             description: 'ES6+, DOM, Funções',
             category: 'Frontend'
         },
         {
             name: 'HTML/CSS',
             level: 'Básico',
-            icon: '🎨',
+            icon: (
+                <div className="flex justify-center gap-2">
+                    <FaHtml5 className="text-orange-500" />
+                    <FaCss3Alt className="text-blue-500" />
+                </div>),
             description: 'Estrutura, Estilização',
             category: 'Frontend'
         },
         {
             name: 'Tailwind CSS',
             level: 'Básico',
-            icon: '💨',
+            icon: <SiTailwindcss className="text-sky-400 text-6xl mx-auto" />,
             description: 'Utility Classes',
             category: 'Frontend'
         },
@@ -34,21 +58,21 @@ function Skills() {
         {
             name: 'Java',
             level: 'Básico',
-            icon: '☕',
+            icon: <FaJava className="text-red-500 text-6xl mx-auto" />,
             description: 'POO, Sintaxe',
             category: 'Backend'
         },
         {
             name: 'Python',
             level: 'Básico',
-            icon: '🐍',
+            icon: <FaPython className="text-yellow-400 text-6xl mx-auto" />,
             description: 'Sintaxe, Scripts',
             category: 'Backend'
         },
         {
             name: 'Node.js',
             level: 'Aprendendo',
-            icon: '🟩',
+            icon: <FaNodeJs className="text-green-400 text-6xl mx-auto" />,
             description: 'APIs, Express',
             category: 'Backend'
         },
@@ -57,21 +81,21 @@ function Skills() {
         {
             name: 'PostgreSQL',
             level: 'Básico',
-            icon: '🐘',
+            icon: <SiPostgresql className="text-blue-500 text-6xl mx-auto" />,
             description: 'Queries SQL, Tabelas',
             category: 'Database'
         },
         {
             name: 'MySQL',
             level: 'Básico',
-            icon: '🐬',
+            icon: <SiMysql className="text-blue-400 text-6xl mx-auto" />,
             description: 'CRUD, Relacionamentos',
             category: 'Database'
         },
         {
             name: 'MongoDB',
             level: 'Aprendendo',
-            icon: '🍃',
+            icon: <SiMongodb className="text-green-500 text-6xl mx-auto" />,
             description: 'NoSQL, Documentos',
             category: 'Database'
         },
@@ -80,14 +104,19 @@ function Skills() {
         {
             name: 'Git/GitHub',
             level: 'Básico',
-            icon: '🐙',
+            icon: (
+                <div className="flex justify-center gap-2">
+                    <FaGitAlt className="text-orange-500" />
+                    <FaGithub className="text-white" />
+                </div>
+            ),
             description: 'Commits, Push, Pull',
             category: 'Tools'
         },
         {
             name: 'Vite',
             level: 'Básico',
-            icon: '⚡',
+            icon: <SiVite className="text-purple-400 text-6xl mx-auto" />,
             description: 'Build Tool',
             category: 'Tools'
         },
