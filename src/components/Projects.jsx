@@ -1,3 +1,8 @@
+import fatecRideImg from '../assets/img/fatecride1.png';
+import fatecBookImg from '../assets/img/fatecbook1.png';
+import logoImg from '../assets/img/logo.png';
+import javablogImg from '../assets/img/javablog.png';
+
 function Projects() {
     const projects = [
         {
@@ -15,7 +20,7 @@ function Projects() {
                 'Primeiro projeto React'
             ],
             category: 'Full-Stack',
-            image: '🚗',
+            image: fatecRideImg,
             learning: 'Aprendizado inicial em React'
         },
         {
@@ -33,7 +38,7 @@ function Projects() {
                 'Segurança de dados'
             ],
             category: 'Backend',
-            image: '☕',
+            image: javablogImg,
             learning: 'Estudando Java e autenticação'
         },
         {
@@ -51,7 +56,7 @@ function Projects() {
                 'Integração com banco'
             ],
             category: 'Full-Stack',
-            image: '📱',
+            image: fatecBookImg,
             learning: 'Projeto de aprendizado'
         },
         {
@@ -69,7 +74,7 @@ function Projects() {
                 'Deploy automático'
             ],
             category: 'Frontend',
-            image: '🎨',
+            image: logoImg,
             learning: 'Projeto atual'
         }
     ];
@@ -103,10 +108,15 @@ function Projects() {
 
                                 {/* Lado Esquerdo - Ícone */}
                                 <div className="md:col-span-1 flex items-center justify-center">
-                                    <div className="w-24 h-24 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center text-5xl border border-purple-500/30">
-                                        {project.image}
+                                    <div className="w-24 h-24 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center border border-purple-500/30 overflow-hidden">
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="h-full w-full object-contain"
+                                        />
                                     </div>
                                 </div>
+
 
                                 {/* Lado Direito - Informações */}
                                 <div className="md:col-span-4 flex flex-col justify-between">
@@ -116,8 +126,8 @@ function Projects() {
                                         {/* Badges */}
                                         <div className="flex flex-wrap items-center gap-2 mb-3">
                                             <span className={`text-xs px-3 py-1 rounded-full font-semibold ${project.status === 'Em Desenvolvimento'
-                                                    ? 'bg-blue-500/20 text-blue-400 border border-blue-500/50'
-                                                    : 'bg-green-500/20 text-green-400 border border-green-500/50'
+                                                ? 'bg-blue-500/20 text-blue-400 border border-blue-500/50'
+                                                : 'bg-green-500/20 text-green-400 border border-green-500/50'
                                                 }`}>
                                                 {project.status}
                                             </span>
