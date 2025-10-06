@@ -1,4 +1,5 @@
 import minhaFoto from '../assets/img/Fot.jpg'
+import { FaRocket } from 'react-icons/fa';
 
 function Hero() {
     return (
@@ -38,7 +39,7 @@ function Hero() {
                         href="#projetos"
                         className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full transition transform hover:scale-105"
                     >
-                        Ver Projetos 🚀
+                        Ver Projetos <FaRocket className="animate-bounce inline-block text-green-400" />
                     </a>
                 </div>
 

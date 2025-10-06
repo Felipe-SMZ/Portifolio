@@ -2,12 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-Scroll suave
+/* Scroll suave */
 html {
   scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  /* Fonte moderna e legível */
+  background-color: #0f0f0f;
+  /* Fundo escuro elegante */
+  color-scheme: dark;
+  /* Suporte automático ao modo escuro */
 }
 
 /* Transição suave entre seções */
 section {
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  scroll-margin-top: 80px;
+  /* Evita que o topo fique escondido atrás do header fixo */
+}
+
+/* Animação de fade-in para seções */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+/* Estilização de links */
+a {
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+  transform: scale(1.05);
+}
+
+/* Scrollbar personalizada (opcional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7c3aed;
+  border-radius: 4px;
 }
