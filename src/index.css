@@ -2,60 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Scroll suave */
-html {
-  scroll-behavior: smooth;
-  font-family: 'Inter', sans-serif;
-  /* Fonte moderna e legível */
-  background-color: #0f0f0f;
-  /* Fundo escuro elegante */
-  color-scheme: dark;
-  /* Suporte automático ao modo escuro */
-}
-
-/* Transição suave entre seções */
-section {
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  scroll-margin-top: 80px;
-  /* Evita que o topo fique escondido atrás do header fixo */
-}
-
-/* Animação de fade-in para seções */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  body {
+    @apply bg-black text-slate-100 antialiased;
   }
 }
 
-.fade-in-up {
-  animation: fadeInUp 0.8s ease-out both;
-}
-
-/* Estilização de links */
-a {
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-a:hover {
-  transform: scale(1.05);
-}
-
-/* Scrollbar personalizada (opcional) */
+/* Scrollbar espacial */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f1f1f;
+  @apply bg-black;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #7c3aed;
-  border-radius: 4px;
+  @apply bg-gradient-to-b from-cyan-500 to-blue-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply from-cyan-400 to-blue-500;
+}
+
+/* Animações de delay para estrelas */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+section {
+  scroll-margin-top: 80px;
 }
