@@ -1,16 +1,43 @@
-# React + Vite
+# 💼 Portfólio Pessoal – Felipe SMZ
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao meu portfólio! Este projeto foi desenvolvido com foco em performance, design responsivo e boas práticas de desenvolvimento front-end. Aqui você encontra uma vitrine dos meus projetos, habilidades e formas de contato.
 
-Currently, two official plugins are available:
+<!-- ![Banner do Portfólio](https://github.com/Felipe-SMZ/Portifolio/assets/banner-preview.png) <!-- Substitua pelo link correto da imagem no GitHub -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## React Compiler
+- ⚛️ [React](https://reactjs.org/) – Biblioteca para construção de interfaces modernas
+- ⚡ [Vite](https://vitejs.dev/) – Ferramenta de build rápida e leve
+- 🎨 [TailwindCSS](https://tailwindcss.com/) – Framework de estilos utilitários
+- 🌐 [Vercel](https://vercel.com/) – Deploy contínuo e hospedagem
+- 📊 [Vercel Analytics](https://vercel.com/analytics) – Monitoramento de acessos e performance
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Como rodar localmente
 
-## Expanding the ESLint configuration
+```bash
+# Clone o repositório
+git clone https://github.com/Felipe-SMZ/Portifolio.git
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Acesse a pasta do projeto
+cd Portifolio
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
+npm run dev
+
+```
+## 📈 Monitoramento com Vercel Analytics
+Este projeto utiliza o Web Analytics da Vercel para rastrear visualizações de página, tempo de resposta e comportamento dos visitantes. Basta navegar pelo site para gerar eventos. O componente <Analytics /> está integrado ao layout principal.
+
+## 🖼️ Preview
+Você pode acessar o site publicado aqui: 🔗 https://www.devfelipeshimizu.me/
+
+## 📬 Contato
+Entre em contato comigo por aqui:
+
+LinkedIn www.linkedin.com/in/felipesshimizu
+
+## 📄 Licença
+Este projeto é de propriedade exclusiva de Felipe SMZ. O uso, reprodução ou modificação do código-fonte ou design está proibido sem autorização expressa do autor. Se você deseja utilizar partes deste projeto como referência ou base para o seu próprio portfólio, entre em contato comigo previamente.
