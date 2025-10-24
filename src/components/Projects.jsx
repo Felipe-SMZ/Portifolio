@@ -25,21 +25,22 @@ function Projects() {
         },
         {
             id: 2,
-            title: 'Blog com Autenticação JWT',
-            description: 'API REST desenvolvida em Java para sistema de blog com autenticação segura. Implementa JWT (JSON Web Tokens) para controle de acesso e segurança.',
-            technologies: ['Java', 'Spring Boot', 'JWT', 'PostgreSQL'],
-            status: 'Em Desenvolvimento',
+            title: 'ThreadFlow - API REST de Blog',
+            description: 'API REST robusta para gerenciamento de blog com autenticação JWT, controle de permissões por roles e documentação interativa via Swagger. Desenvolvida com foco em segurança, escalabilidade e testes.',
+            technologies: ['Java', 'Spring Boot', 'JWT', 'PostgreSQL', 'Swagger', 'JUnit', 'Docker'],
+            status: 'Concluído',
             github: 'https://github.com/Felipe-SMZ/Blog.git',
             demo: null,
             highlights: [
                 'Autenticação JWT',
-                'API RESTful',
-                'Spring Boot',
-                'Segurança de dados'
+                'Sistema de Roles (USER, ADMIN, MODERATOR)',
+                'Swagger UI',
+                'Testes com JUnit e Mockito',
+                'Busca e paginação avançadas'
             ],
             category: 'Backend',
             image: javablogImg,
-            learning: 'Estudando Java e autenticação'
+            learning: 'Domínio de autenticação e segurança'
         },
         {
             id: 3,
