@@ -83,7 +83,7 @@ function Projects() {
             id: 5,
             title: 'Bakery Management System (Gestão de Padaria)',
             description: 'Sistema completo para gerenciamento de padarias com controle de estoque, vendas, clientes e fiado. Desenvolvido como trabalho acadêmico com foco em regras de negócio reais.',
-            technologies: ['Node.js', 'Express', 'MySQL', 'JavaScript', 'Swagger'],
+            technologies: ['Node.js', 'Express', 'MySQL', 'JavaScript'],
             status: 'Backend Concluído',
             github: 'https://github.com/Felipe-SMZ/bakery-system',
             demo: null,
