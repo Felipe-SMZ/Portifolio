@@ -2,6 +2,7 @@ import fatecRideImg from '../assets/img/fatecride1.png';
 import fatecBookImg from '../assets/img/fatecbook1.png';
 import logoImg from '../assets/img/logo.png';
 import javablogImg from '../assets/img/javablog.png';
+import bakerylogoImg from '../assets/img/bakerylogo.png';
 
 function Projects() {
     const projects = [
@@ -77,6 +78,24 @@ function Projects() {
             category: 'Frontend',
             image: logoImg,
             learning: 'Projeto atual'
+        },
+        {
+            id: 5,
+            title: 'Bakery Management System (Gestão de Padaria)',
+            description: 'Sistema completo para gerenciamento de padarias com controle de estoque, vendas, clientes e fiado. Desenvolvido como trabalho acadêmico com foco em regras de negócio reais.',
+            technologies: ['Node.js', 'Express', 'MySQL', 'JavaScript', 'Swagger'],
+            status: 'Backend Concluído',
+            github: 'https://github.com/Felipe-SMZ/bakery-system',
+            demo: null,
+            highlights: [
+                'API RESTful completa',
+                'Validação de crédito e estoque',
+                'Relatórios gerenciais',
+                'Documentação detalhada'
+            ],
+            category: 'Full-Stack',
+            image: bakerylogoImg, 
+            learning: 'Aplicação de regras de negócio reais'
         }
     ];
 
