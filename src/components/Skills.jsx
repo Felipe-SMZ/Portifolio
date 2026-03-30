@@ -15,109 +15,125 @@ import {
     SiMysql,
     SiMongodb,
     SiVite,
+    SiKotlin,
+    SiSpringboot
 } from 'react-icons/si';
-
 
 function Skills() {
     const skills = [
-        // Front-end
+        // Frontend
         {
             name: 'React',
-            level: 'Básico',
+            level: 'Intermediário',
             icon: <FaReact className="text-cyan-400 text-6xl mx-auto" />,
-            description: 'Componentes, Props, Hooks',
+            description: 'Componentes, Props, Hooks, API Integration',
             category: 'Frontend'
         },
         {
             name: 'JavaScript',
-            level: 'Básico',
+            level: 'Intermediário',
             icon: <FaJsSquare className="text-yellow-400 text-6xl mx-auto" />,
-            description: 'ES6+, DOM, Funções',
+            description: 'ES6+, DOM, Funções, Fetch/Async',
             category: 'Frontend'
         },
         {
             name: 'HTML/CSS',
-            level: 'Básico',
+            level: 'Intermediário',
             icon: (
                 <div className="flex justify-center gap-2">
-                    <FaHtml5 className="text-orange-500" />
-                    <FaCss3Alt className="text-blue-500" />
-                </div>),
-            description: 'Estrutura, Estilização',
+                    <FaHtml5 className="text-orange-500 text-6xl" />
+                    <FaCss3Alt className="text-blue-500 text-6xl" />
+                </div>
+            ),
+            description: 'Estrutura, Estilização, Responsividade',
             category: 'Frontend'
         },
         {
             name: 'Tailwind CSS',
-            level: 'Básico',
+            level: 'Básico/Intermediário',
             icon: <SiTailwindcss className="text-sky-400 text-6xl mx-auto" />,
-            description: 'Utility Classes',
+            description: 'Utility Classes, Responsividade rápida',
             category: 'Frontend'
         },
 
         // Backend
         {
             name: 'Java',
-            level: 'Básico',
+            level: 'Intermediário',
             icon: <FaJava className="text-red-500 text-6xl mx-auto" />,
-            description: 'POO, Sintaxe',
+            description: 'POO, Spring Boot, APIs REST',
+            category: 'Backend'
+        },
+        {
+            name: 'Spring Boot',
+            level: 'Intermediário',
+            icon: <SiSpringboot className="text-green-500 text-6xl mx-auto" />,
+            description: 'APIs REST, Bean Validation, JWT',
+            category: 'Backend'
+        },
+        {
+            name: 'Node.js',
+            level: 'Básico/Aprendendo',
+            icon: <FaNodeJs className="text-green-400 text-6xl mx-auto" />,
+            description: 'APIs, Express, CRUD',
             category: 'Backend'
         },
         {
             name: 'Python',
             level: 'Básico',
             icon: <FaPython className="text-yellow-400 text-6xl mx-auto" />,
-            description: 'Sintaxe, Scripts',
+            description: 'Sintaxe, Scripts, Automação',
             category: 'Backend'
         },
         {
-            name: 'Node.js',
-            level: 'Aprendendo',
-            icon: <FaNodeJs className="text-green-400 text-6xl mx-auto" />,
-            description: 'APIs, Express',
-            category: 'Backend'
+            name: 'Kotlin',
+            level: 'Básico',
+            icon: <SiKotlin className="text-purple-500 text-6xl mx-auto" />,
+            description: 'Android, Coroutines, MVVM',
+            category: 'Backend/Frontend'
         },
 
         // Banco de Dados
         {
             name: 'PostgreSQL',
-            level: 'Básico',
+            level: 'Intermediário',
             icon: <SiPostgresql className="text-blue-500 text-6xl mx-auto" />,
-            description: 'Queries SQL, Tabelas',
+            description: 'Queries SQL, Tabelas, Relacionamentos',
             category: 'Database'
         },
         {
             name: 'MySQL',
-            level: 'Básico',
+            level: 'Intermediário',
             icon: <SiMysql className="text-blue-400 text-6xl mx-auto" />,
-            description: 'CRUD, Relacionamentos',
+            description: 'CRUD, Relacionamentos, Procedures',
             category: 'Database'
         },
         {
             name: 'MongoDB',
             level: 'Aprendendo',
             icon: <SiMongodb className="text-green-500 text-6xl mx-auto" />,
-            description: 'NoSQL, Documentos',
+            description: 'NoSQL, Documentos, Agregações',
             category: 'Database'
         },
 
         // Ferramentas
         {
             name: 'Git/GitHub',
-            level: 'Básico',
+            level: 'Intermediário',
             icon: (
                 <div className="flex justify-center gap-2">
-                    <FaGitAlt className="text-orange-500" />
-                    <FaGithub className="text-white" />
+                    <FaGitAlt className="text-orange-500 text-6xl" />
+                    <FaGithub className="text-white text-6xl" />
                 </div>
             ),
-            description: 'Commits, Push, Pull',
+            description: 'Commits, Push, Pull, Branches',
             category: 'Tools'
         },
         {
             name: 'Vite',
             level: 'Básico',
             icon: <SiVite className="text-purple-400 text-6xl mx-auto" />,
-            description: 'Build Tool',
+            description: 'Build Tool, Hot Reload',
             category: 'Tools'
         },
     ];
@@ -141,7 +157,6 @@ function Skills() {
 
                 {/* Grid de Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
                     {skills.map((skill, index) => (
                         <div
                             key={index}
@@ -161,7 +176,9 @@ function Skills() {
                             <div className="flex justify-center mb-3">
                                 <span className={`text-xs px-3 py-1 rounded-full font-semibold ${skill.level === 'Aprendendo'
                                     ? 'bg-blue-500/20 text-blue-400 border border-blue-500/50'
-                                    : 'bg-purple-500/20 text-purple-400 border border-purple-500/50'
+                                    : skill.level === 'Básico'
+                                        ? 'bg-purple-500/20 text-purple-400 border border-purple-500/50'
+                                        : 'bg-green-500/20 text-green-400 border border-green-500/50'
                                     }`}>
                                     {skill.level}
                                 </span>
@@ -173,7 +190,6 @@ function Skills() {
                             </p>
                         </div>
                     ))}
-
                 </div>
 
                 {/* Mensagem motivacional */}
@@ -182,9 +198,9 @@ function Skills() {
                         🚀 Sempre aprendendo e evoluindo!
                     </p>
                 </div>
-
             </div>
         </section>
     );
 }
+
 export default Skills;

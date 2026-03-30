@@ -3,6 +3,7 @@ import fatecBookImg from '../assets/img/fatecbook1.png';
 import logoImg from '../assets/img/logo.png';
 import javablogImg from '../assets/img/javablog.png';
 import bakerylogoImg from '../assets/img/bakerylogo.png';
+import calculadoraflexImg from '../assets/img/calculadoraflex.png'
 
 function Projects() {
     const projects = [
@@ -45,21 +46,22 @@ function Projects() {
         },
         {
             id: 3,
-            title: 'FatecBook - Rede Social Acadêmica',
-            description: 'Projeto de estudo que recria funcionalidades de uma rede social voltada para o ambiente acadêmico usando Handlebars como template engine.',
-            technologies: ['Node.js', 'Handlebars', 'JavaScript', 'PostgreSQL'],
-            status: 'Concluído',
-            github: 'https://github.com/Felipe-SMZ/FatecBook.git',
+            title: 'Calculadora de Combustível',
+            description: 'Aplicativo Android que calcula a melhor opção entre Etanol e Gasolina, consumindo uma API REST desenvolvida em Java/Spring Boot.',
+            technologies: ['Kotlin', 'Android', 'MVVM', 'Retrofit', 'Coroutines', 'Spring Boot', 'Java'],
+            status: 'Em Desenvolvimento',
+            github: 'https://github.com/Felipe-SMZ/app-combustivel',
             demo: null,
             highlights: [
-                'Template engine Handlebars',
-                'Sistema de posts',
-                'CRUD completo',
-                'Integração com banco'
+                'MVVM + LiveData',
+                'Chamada a API com Retrofit e Coroutines',
+                'UI moderna com Material Components',
+                'Preparado para persistência futura de histórico'
             ],
             category: 'Full-Stack',
-            image: fatecBookImg,
-            learning: 'Projeto de aprendizado'
+            image: calculadoraflexImg,
+            learning: 'Integração Android ↔ Backend, arquitetura MVVM'
+
         },
         {
             id: 4,
@@ -94,8 +96,27 @@ function Projects() {
                 'Documentação detalhada'
             ],
             category: 'Full-Stack',
-            image: bakerylogoImg, 
+            image: bakerylogoImg,
             learning: 'Aplicação de regras de negócio reais'
+        },
+        {
+            id: 6,
+
+            title: 'FatecBook - Rede Social Acadêmica',
+            description: 'Projeto de estudo que recria funcionalidades de uma rede social voltada para o ambiente acadêmico usando Handlebars como template engine.',
+            technologies: ['Node.js', 'Handlebars', 'JavaScript', 'PostgreSQL'],
+            status: 'Concluído',
+            github: 'https://github.com/Felipe-SMZ/FatecBook.git',
+            demo: null,
+            highlights: [
+                'Template engine Handlebars',
+                'Sistema de posts',
+                'CRUD completo',
+                'Integração com banco'
+            ],
+            category: 'Full-Stack',
+            image: fatecBookImg,
+            learning: 'Projeto de aprendizado'
         }
     ];
 
