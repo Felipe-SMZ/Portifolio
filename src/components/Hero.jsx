@@ -109,11 +109,12 @@ function Hero() {
                         <img
                             src={minhaFoto}
                             alt="Felipe Shimizu"
+                            loading="lazy"
                             className="w-full rounded-3xl object-cover aspect-square border-2 border-cyan-500/40 shadow-2xl shadow-cyan-500/30"
                         />
                         {/* Badge flutuante */}
                         <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-cyan-500 to-blue-600 p-3 rounded-xl shadow-xl shadow-cyan-500/50 border border-cyan-400/30">
-                            <p className="text-white font-bold text-base">2+ Ano</p>
+                            <p className="text-white font-bold text-base">Desde 2022</p>
                             <p className="text-cyan-100 text-xs">Codando</p>
                         </div>
                     </div>

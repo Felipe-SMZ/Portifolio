@@ -3,8 +3,8 @@ import avatarImg from '../assets/img/avatar.jpg';
 
 function About() {
     const stats = [
-        { value: '2+', label: 'Anos Codando' },
-        { value: '15', label: 'Tecnologias' },
+        { value: 'Desde 2022', label: 'Programando' },
+        { value: '15+', label: 'Tecnologias' },
         { value: '12+', label: 'Projetos' },
         { value: '100%', label: 'Dedicação' },
     ];
@@ -26,6 +26,7 @@ function About() {
                         <img
                             src={avatarImg}
                             alt="Felipe Shimizu"
+                            loading="lazy"
                             className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-xl shadow-lg border border-gray-700"
                         />
                     </motion.div>

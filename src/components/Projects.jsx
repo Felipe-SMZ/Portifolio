@@ -14,6 +14,7 @@ function Projects() {
             technologies: ['React', 'Java', 'Spring Boot', 'Node.js', 'MySQL', 'MongoDB', 'WebSocket', 'JWT', 'TailwindCSS'],
             status: 'Em Desenvolvimento',
             github: 'https://github.com/Felipe-SMZ/FatecRideBackend2.0',
+            githubFrontend: 'https://github.com/Felipe-SMZ/FatecRideFrontend2.0.git',
             demo: null,
             highlights: [
                 'Arquitetura de microsserviços com 3 backends independentes (Spring Boot + 2x Node.js)',
@@ -156,6 +157,7 @@ function Projects() {
                                         <img
                                             src={project.image}
                                             alt={project.title}
+                                            loading="lazy"
                                             className="h-full w-full object-contain"
                                         />
                                     </div>
@@ -228,8 +230,18 @@ function Projects() {
                                             rel="noopener noreferrer"
                                             className="flex-1 bg-gray-900 hover:bg-gray-700 text-white font-semibold py-2.5 px-5 rounded-lg transition text-center border border-gray-700 hover:border-purple-500 text-sm"
                                         >
-                                            Ver Código
+                                            {project.githubFrontend ? 'Backend' : 'Ver Código'}
                                         </a>
+                                        {project.githubFrontend && (
+                                            <a
+                                                href={project.githubFrontend}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex-1 bg-gray-900 hover:bg-gray-700 text-white font-semibold py-2.5 px-5 rounded-lg transition text-center border border-gray-700 hover:border-purple-500 text-sm"
+                                            >
+                                                Frontend
+                                            </a>
+                                        )}
                                         {project.demo && (
                                             <a
                                                 href={project.demo}
