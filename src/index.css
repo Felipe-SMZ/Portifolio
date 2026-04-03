@@ -35,14 +35,84 @@
   animation-delay: 100ms;
 }
 
+.delay-200 {
+  animation-delay: 200ms;
+}
+
 .delay-300 {
   animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
 }
 
 .delay-500 {
   animation-delay: 500ms;
 }
 
+.delay-600 {
+  animation-delay: 600ms;
+}
+
 section {
   scroll-margin-top: 80px;
+}
+
+/* Animações de Entrada - Hero */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Classes de Animação */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }

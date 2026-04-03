@@ -27,35 +27,54 @@ function Hero() {
             {/* Fundo com gradiente */}
             <div className="absolute inset-0 bg-gradient-to-b from-blue-950/30 via-black to-black"></div>
 
-            {/* Partículas */}
+            {/* Partículas com float animation */}
             <div className="absolute inset-0 opacity-30">
-                <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-                <div className="absolute top-40 right-20 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-100"></div>
-                <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-cyan-300 rounded-full animate-pulse delay-300"></div>
-                <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-blue-300 rounded-full animate-pulse delay-500"></div>
+                {/* Seção superior-esquerda */}
+                <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse animate-float"></div>
+                <div className="absolute top-32 left-1/3 w-1 h-1 bg-blue-400/70 rounded-full animate-pulse delay-200 animate-float"></div>
+                <div className="absolute top-16 left-1/2 w-1.5 h-1.5 bg-cyan-300/60 rounded-full animate-pulse delay-100 animate-float"></div>
+                
+                {/* Seção superior-direita */}
+                <div className="absolute top-40 right-20 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-100 animate-float"></div>
+                <div className="absolute top-32 right-1/4 w-1 h-1 bg-cyan-400/60 rounded-full animate-pulse delay-200 animate-float"></div>
+                <div className="absolute top-24 right-1/3 w-1.5 h-1.5 bg-blue-300/70 rounded-full animate-pulse delay-300 animate-float"></div>
+                
+                {/* Seção meio-esquerda */}
+                <div className="absolute top-1/3 left-20 w-1 h-1 bg-cyan-300/50 rounded-full animate-pulse delay-400 animate-float"></div>
+                <div className="absolute top-1/2 left-1/4 w-1.5 h-1.5 bg-blue-400/60 rounded-full animate-pulse delay-500 animate-float"></div>
+                
+                {/* Seção meio-direita */}
+                <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-blue-300 rounded-full animate-pulse delay-500 animate-float"></div>
+                <div className="absolute top-2/3 right-10 w-1 h-1 bg-cyan-300/70 rounded-full animate-pulse delay-600 animate-float"></div>
+                
+                {/* Seção inferior */}
+                <div className="absolute bottom-40 left-1/3 w-1.5 h-1.5 bg-blue-400/50 rounded-full animate-pulse delay-400 animate-float"></div>
+                <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-cyan-300 rounded-full animate-pulse delay-300 animate-float"></div>
+                <div className="absolute bottom-48 right-1/4 w-1 h-1 bg-cyan-400/60 rounded-full animate-pulse delay-200 animate-float"></div>
+                <div className="absolute bottom-20 right-16 w-1 h-1 bg-blue-300/60 rounded-full animate-pulse delay-100 animate-float"></div>
             </div>
 
             <div className="relative max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 lg:gap-16 items-center z-10">
 
                 {/* Lado esquerdo - Texto */}
                 <div className="order-2 md:order-1">
-                    <div className="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full mb-4 backdrop-blur-sm">
+                    <div className="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full mb-4 backdrop-blur-sm animate-fade-in-up delay-100">
                         <p className="text-cyan-400 text-sm font-semibold">
                             👋 Disponível para oportunidades
                         </p>
                     </div>
 
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight animate-fade-in-up delay-200">
                         <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">
                             Felipe Shimizu
                         </span>
                     </h1>
 
-                    <h2 className="text-xl md:text-2xl text-blue-100 mb-4 font-light">
+                    <h2 className="text-xl md:text-2xl text-blue-100 mb-4 font-light animate-fade-in-up delay-300">
                         Desenvolvedor <span className="text-cyan-400 font-semibold">Full Stack</span> em formação
                     </h2>
 
-                    <p className="text-slate-400 text-base md:text-lg mb-6 leading-relaxed">
+                    <p className="text-slate-400 text-base md:text-lg mb-6 leading-relaxed animate-fade-in-up delay-400">
                         Transformo curiosidade em código. <br />
                         Construindo aplicações completas com <span className="text-cyan-400 font-semibold">Java</span>, 
                         <span className="text-cyan-400 font-semibold"> Spring Boot</span> e <span className="text-cyan-400 font-semibold">React</span>. <br />
@@ -63,7 +82,7 @@ function Hero() {
                     </p>
 
                     {/* Botões */}
-                    <div className="flex flex-wrap gap-3 mb-6">
+                    <div className="flex flex-wrap gap-3 mb-6 animate-fade-in-up delay-500">
                         <a
                             href="#projetos"
                             className="px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold rounded-lg transition-all hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50"
@@ -79,7 +98,7 @@ function Hero() {
                     </div>
 
                     {/* Social Links */}
-                    <div className="flex gap-3">
+                    <div className="flex gap-3 animate-fade-in-up delay-600">
                         {socialLinks.map((link, index) => (
                             <a
                                 key={index}
@@ -96,7 +115,7 @@ function Hero() {
                 </div>
 
                 {/* Lado direito - Foto */}
-                <div className="order-1 md:order-2 relative flex justify-center md:justify-end">
+                <div className="order-1 md:order-2 relative flex justify-center md:justify-end animate-fade-in-down delay-300">
                     {/* Glow */}
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl blur-3xl opacity-20 animate-pulse"></div>
 
@@ -113,7 +132,7 @@ function Hero() {
                             className="w-full rounded-3xl object-cover aspect-square border-2 border-cyan-500/40 shadow-2xl shadow-cyan-500/30"
                         />
                         {/* Badge flutuante */}
-                        <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-cyan-500 to-blue-600 p-3 rounded-xl shadow-xl shadow-cyan-500/50 border border-cyan-400/30">
+                        <div className="absolute -bottom-4 -right-4 bg-gradient-to-r from-cyan-500 to-blue-600 p-3 rounded-xl shadow-xl shadow-cyan-500/50 border border-cyan-400/30 animate-fade-in-up delay-600">
                             <p className="text-white font-bold text-base">Desde 2022</p>
                             <p className="text-cyan-100 text-xs">Codando</p>
                         </div>
