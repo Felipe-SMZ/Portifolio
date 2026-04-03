@@ -4,8 +4,39 @@ import logoImg from '../assets/img/logo.png';
 import javablogImg from '../assets/img/javablog.png';
 import bakerylogoImg from '../assets/img/bakerylogo.png';
 import calculadoraflexImg from '../assets/img/calculadoraflex.png'
+import { motion } from 'framer-motion';
 
 function Projects() {
+    const projectColors = {
+        1: { gradient: 'from-cyan-500/20 to-blue-600/20', border: 'hover:border-cyan-500', glow: 'cyan-500/30' },
+        2: { gradient: 'from-red-500/20 to-orange-600/20', border: 'hover:border-red-500', glow: 'red-500/30' },
+        3: { gradient: 'from-purple-500/20 to-blue-600/20', border: 'hover:border-purple-500', glow: 'purple-500/30' },
+        4: { gradient: 'from-orange-500/20 to-yellow-600/20', border: 'hover:border-orange-500', glow: 'orange-500/30' },
+        5: { gradient: 'from-green-500/20 to-emerald-600/20', border: 'hover:border-green-500', glow: 'green-500/30' },
+        6: { gradient: 'from-blue-500/20 to-cyan-600/20', border: 'hover:border-blue-500', glow: 'blue-500/30' }
+    };
+
+    const techColors = {
+        'React': 'from-blue-500 to-cyan-400',
+        'Java': 'from-orange-600 to-red-500',
+        'Spring Boot': 'from-green-500 to-emerald-400',
+        'Node.js': 'from-green-600 to-green-400',
+        'JavaScript': 'from-yellow-500 to-orange-400',
+        'TypeScript': 'from-blue-600 to-blue-400',
+        'MySQL': 'from-blue-700 to-blue-500',
+        'MongoDB': 'from-green-700 to-green-500',
+        'PostgreSQL': 'from-blue-800 to-blue-600',
+        'TailwindCSS': 'from-cyan-500 to-blue-500',
+        'Kotlin': 'from-purple-600 to-purple-400',
+        'Android': 'from-green-500 to-lime-400',
+        'Vite': 'from-purple-500 to-purple-400',
+        'Handlebars': 'from-orange-600 to-yellow-500',
+    };
+
+    const getTechColor = (tech) => {
+        return techColors[tech] || 'from-gray-600 to-gray-500';
+    };
+
     const projects = [
         {
             id: 1,
@@ -142,139 +173,177 @@ function Projects() {
                 </div>
 
                 {/* Grid de Projetos */}
-                <div className="space-y-8">
+                <div className="space-y-12">
 
-                    {projects.map((project) => (
-                        <div
-                            key={project.id}
-                            className="bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20"
-                        >
-                            <div className="grid md:grid-cols-5 gap-6 p-6">
+                    {projects.map((project, index) => {
+                        const colors = projectColors[project.id];
+                        const isEven = index % 2 === 0;
 
-                                {/* Lado Esquerdo - Ícone */}
-                                <div className="md:col-span-1 flex items-center justify-center">
-                                    <div className="w-24 h-24 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center border border-purple-500/30 overflow-hidden">
-                                        <img
-                                            src={project.image}
-                                            alt={project.title}
-                                            loading="lazy"
-                                            className="h-full w-full object-contain"
-                                        />
+                        return (
+                            <motion.div
+                                key={project.id}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: index * 0.15 }}
+                                viewport={{ once: true }}
+                            >
+                                <div className={`relative group`}>
+                                    {/* Glow Background */}
+                                    <div className={`absolute -inset-1 bg-gradient-to-r ${colors.gradient} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+
+                                    {/* Card Principal */}
+                                    <div className={`relative bg-gray-900/80 backdrop-blur-sm rounded-2xl border border-gray-700 ${colors.border} transition-all duration-300 overflow-hidden`}>
+                                        
+                                        {/* Grid Layout - Alternado */}
+                                        <div className={`grid md:grid-cols-2 gap-8 p-8`}>
+                                            
+                                            {/* Imagem e Badges - Muda posição */}
+                                            <motion.div
+                                                initial={{ opacity: 0, x: isEven ? -30 : 30 }}
+                                                whileInView={{ opacity: 1, x: 0 }}
+                                                transition={{ duration: 0.6, delay: index * 0.15 + 0.1 }}
+                                                className={`flex flex-col gap-4 ${isEven ? 'md:order-1 order-2' : 'md:order-2 order-2'}`}
+                                            >
+                                                {/* Status Badges */}
+                                                <div className="flex flex-wrap gap-2">
+                                                    <span className={`text-xs px-3 py-1.5 rounded-full font-semibold backdrop-blur-sm border ${project.status === 'Em Desenvolvimento'
+                                                        ? 'bg-blue-500/20 text-blue-300 border-blue-500/50'
+                                                        : 'bg-green-500/20 text-green-300 border-green-500/50'
+                                                        }`}>
+                                                        {project.status}
+                                                    </span>
+                                                    <span className={`text-xs px-3 py-1.5 rounded-full font-semibold backdrop-blur-sm border bg-${['cyan', 'red', 'purple', 'orange', 'green', 'blue'][project.id - 1]}-500/20 text-${['cyan', 'red', 'purple', 'orange', 'green', 'blue'][project.id - 1]}-300 border-${['cyan', 'red', 'purple', 'orange', 'green', 'blue'][project.id - 1]}-500/50`}>
+                                                        {project.category}
+                                                    </span>
+                                                </div>
+
+                                                {/* Tecnologias com cores */}
+                                                <div className="flex flex-wrap gap-2">
+                                                    {project.technologies.slice(0, 6).map((tech, idx) => (
+                                                        <span
+                                                            key={idx}
+                                                            className={`text-xs px-3 py-1.5 rounded-full font-semibold bg-gradient-to-r ${getTechColor(tech)} text-white shadow-lg shadow-${getTechColor(tech).split(' ')[1]}/30 backdrop-blur-sm`}
+                                                        >
+                                                            {tech}
+                                                        </span>
+                                                    ))}
+                                                    {project.technologies.length > 6 && (
+                                                        <span className="text-xs px-3 py-1.5 rounded-full font-semibold bg-gray-800 text-gray-400 border border-gray-700">
+                                                            +{project.technologies.length - 6} mais
+                                                        </span>
+                                                    )}
+                                                </div>
+
+                                                {/* Imagem */}
+                                                <div className="relative h-48 md:h-56 rounded-xl overflow-hidden border border-gray-700 group/img">
+                                                    <div className={`absolute inset-0 bg-gradient-to-br ${colors.gradient}`}></div>
+                                                    <img
+                                                        src={project.image}
+                                                        alt={project.title}
+                                                        loading="lazy"
+                                                        className="relative h-full w-full object-contain p-6 group-hover/img:scale-110 transition-transform duration-300"
+                                                    />
+                                                </div>
+                                            </motion.div>
+
+                                            {/* Conteúdo Texto - Muda posição */}
+                                            <motion.div
+                                                initial={{ opacity: 0, x: isEven ? 30 : -30 }}
+                                                whileInView={{ opacity: 1, x: 0 }}
+                                                transition={{ duration: 0.6, delay: index * 0.15 + 0.1 }}
+                                                className={`flex flex-col justify-between ${isEven ? 'md:order-2 order-1' : 'md:order-1 order-1'}`}
+                                            >
+                                                {/* Título e Descrição */}
+                                                <div>
+                                                    <h3 className="text-3xl font-bold mb-3 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                                                        {project.title}
+                                                    </h3>
+                                                    <p className="text-gray-400 mb-5 leading-relaxed text-base">
+                                                        {project.description}
+                                                    </p>
+
+                                                    {/* Highlights */}
+                                                    <div className="mb-6">
+                                                        <p className="text-sm text-gray-500 mb-3 font-semibold uppercase tracking-wider">Destaques:</p>
+                                                        <ul className="space-y-1.5">
+                                                            {project.highlights.slice(0, 4).map((highlight, idx) => (
+                                                                <li key={idx} className="text-sm text-gray-400 flex items-start gap-2">
+                                                                    <span className="text-cyan-400 mt-1 flex-shrink-0">✦</span>
+                                                                    <span>{highlight}</span>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                {/* Botões */}
+                                                <div className="flex gap-3 flex-wrap">
+                                                    <motion.a
+                                                        whileHover={{ scale: 1.05 }}
+                                                        whileTap={{ scale: 0.95 }}
+                                                        href={project.github}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="flex-1 min-w-[140px] bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-4 rounded-lg transition border border-gray-700 hover:border-cyan-500 text-center text-sm"
+                                                    >
+                                                        {project.githubFrontend ? '🔧 Backend' : '💻 Ver Código'}
+                                                    </motion.a>
+                                                    {project.githubFrontend && (
+                                                        <motion.a
+                                                            whileHover={{ scale: 1.05 }}
+                                                            whileTap={{ scale: 0.95 }}
+                                                            href={project.githubFrontend}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="flex-1 min-w-[140px] bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-4 rounded-lg transition border border-gray-700 hover:border-blue-500 text-center text-sm"
+                                                        >
+                                                            🎨 Frontend
+                                                        </motion.a>
+                                                    )}
+                                                    {project.demo && (
+                                                        <motion.a
+                                                            whileHover={{ scale: 1.05 }}
+                                                            whileTap={{ scale: 0.95 }}
+                                                            href={project.demo}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="flex-1 min-w-[140px] bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition text-center text-sm shadow-lg shadow-cyan-500/50"
+                                                        >
+                                                            🚀 Ver Demo
+                                                        </motion.a>
+                                                    )}
+                                                </div>
+                                            </motion.div>
+                                        </div>
                                     </div>
                                 </div>
-
-
-                                {/* Lado Direito - Informações */}
-                                <div className="md:col-span-4 flex flex-col justify-between">
-
-                                    {/* Header */}
-                                    <div>
-                                        {/* Badges */}
-                                        <div className="flex flex-wrap items-center gap-2 mb-3">
-                                            <span className={`text-xs px-3 py-1 rounded-full font-semibold ${project.status === 'Em Desenvolvimento'
-                                                ? 'bg-blue-500/20 text-blue-400 border border-blue-500/50'
-                                                : 'bg-green-500/20 text-green-400 border border-green-500/50'
-                                                }`}>
-                                                {project.status}
-                                            </span>
-                                            <span className="text-xs px-3 py-1 rounded-full font-semibold bg-purple-500/20 text-purple-400 border border-purple-500/50">
-                                                {project.category}
-                                            </span>
-                                            {project.learning && (
-                                                <span className="text-xs px-3 py-1 rounded-full font-semibold bg-yellow-500/20 text-yellow-400 border border-yellow-500/50">
-                                                    {project.learning}
-                                                </span>
-                                            )}
-                                        </div>
-
-                                        {/* Título */}
-                                        <h3 className="text-2xl font-bold mb-3">
-                                            {project.title}
-                                        </h3>
-
-                                        {/* Descrição */}
-                                        <p className="text-gray-300 mb-4 leading-relaxed">
-                                            {project.description}
-                                        </p>
-
-                                        {/* Highlights em grid 2 colunas */}
-                                        <div className="mb-4">
-                                            <ul className="grid grid-cols-2 gap-2">
-                                                {project.highlights.map((highlight, index) => (
-                                                    <li key={index} className="text-sm text-gray-400 flex items-start gap-2">
-                                                        <span className="text-purple-400 mt-0.5">→</span>
-                                                        <span>{highlight}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
-
-                                        {/* Tecnologias */}
-                                        <div className="flex flex-wrap gap-2 mb-4">
-                                            {project.technologies.map((tech, index) => (
-                                                <span
-                                                    key={index}
-                                                    className="text-xs px-3 py-1 bg-gray-900 text-gray-300 rounded-full border border-gray-700"
-                                                >
-                                                    {tech}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    {/* Botões */}
-                                    <div className="flex gap-3">
-                                        <a
-                                            href={project.github}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex-1 bg-gray-900 hover:bg-gray-700 text-white font-semibold py-2.5 px-5 rounded-lg transition text-center border border-gray-700 hover:border-purple-500 text-sm"
-                                        >
-                                            {project.githubFrontend ? 'Backend' : 'Ver Código'}
-                                        </a>
-                                        {project.githubFrontend && (
-                                            <a
-                                                href={project.githubFrontend}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex-1 bg-gray-900 hover:bg-gray-700 text-white font-semibold py-2.5 px-5 rounded-lg transition text-center border border-gray-700 hover:border-purple-500 text-sm"
-                                            >
-                                                Frontend
-                                            </a>
-                                        )}
-                                        {project.demo && (
-                                            <a
-                                                href={project.demo}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex-1 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2.5 px-5 rounded-lg transition text-center text-sm"
-                                            >
-                                                Ver Demo
-                                            </a>
-                                        )}
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+                            </motion.div>
+                        );
+                    })}
 
                 </div>
 
                 {/* Call to Action */}
-                <div className="text-center mt-12">
-                    <p className="text-gray-400 mb-4">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-center mt-16 py-12 px-8 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-500/30 backdrop-blur-sm"
+                >
+                    <p className="text-gray-400 mb-4 text-lg">
                         Sempre trabalhando em novos projetos e aprendendo novas tecnologias
                     </p>
-                    <a
+                    <motion.a
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                         href="https://github.com/Felipe-SMZ"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition border border-gray-700 hover:border-purple-500"
+                        className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3.5 px-8 rounded-lg transition shadow-lg shadow-cyan-500/40"
                     >
-                        Ver GitHub Completo
-                    </a>
-                </div>
+                        <span>🔗</span> Ver GitHub Completo
+                    </motion.a>
+                </motion.div>
 
             </div>
         </section>
