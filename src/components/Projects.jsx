@@ -9,21 +9,24 @@ function Projects() {
     const projects = [
         {
             id: 1,
-            title: 'FatecRide - Carona Solidária',
-            description: 'Sistema de caronas colaborativas desenvolvido como Projeto Integrador. Conecta estudantes que oferecem e procuram caronas, promovendo economia e sustentabilidade na comunidade acadêmica.',
-            technologies: ['React', 'JavaScript', 'CSS', 'MySQL'],
+            title: 'FatecRide — Plataforma de Caronas Universitárias',
+            description: 'Plataforma completa de caronas colaborativas desenvolvida como Projeto Integrador do 3º semestre de DSM na FATEC Cotia. Conecta motoristas e passageiros da comunidade acadêmica com rotas em mapa, agendamento recorrente de caronas e chat em tempo real.',
+            technologies: ['React', 'Java', 'Spring Boot', 'Node.js', 'MySQL', 'MongoDB', 'WebSocket', 'JWT', 'TailwindCSS'],
             status: 'Em Desenvolvimento',
-            github: 'https://github.com/Felipe-SMZ/fatecRide.git',
+            github: 'https://github.com/Felipe-SMZ/FatecRideBackend2.0',
             demo: null,
             highlights: [
-                'Interface com React',
-                'Sistema de rotas',
-                'Trabalho em equipe (PI)',
-                'Primeiro projeto React'
+                'Arquitetura de microsserviços com 3 backends independentes (Spring Boot + 2x Node.js)',
+                'Autenticação JWT com Spring Security',
+                'Chat em tempo real via WebSocket',
+                'Agendamento recorrente de caronas por dia da semana ou intervalo de dias',
+                'Visualização de rotas com Leaflet Maps',
+                'API documentada com Swagger/OpenAPI',
+                'Trabalho colaborativo com Git Flow (branches, PRs e code review)',
             ],
             category: 'Full-Stack',
             image: fatecRideImg,
-            learning: 'Aprendizado inicial em React'
+            learning: 'Arquitetura de sistemas distribuídos, integração entre stacks diferentes (Java + Node.js), autenticação JWT, WebSocket e gestão de projeto em equipe'
         },
         {
             id: 2,
