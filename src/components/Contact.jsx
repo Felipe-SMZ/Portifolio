@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Contact() {
     return (
-        <section id="contato" className="py-20 px-4 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-800">
+        <section id="contato" className="py-32 px-4 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-800">
             <div className="max-w-4xl mx-auto">
 
                 {/* Título */}
