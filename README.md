@@ -1,7 +1,8 @@
 
 # 💼 Portfólio Pessoal – Felipe SMZ
 
-![Deploy Vercel](https://vercelbadge.vercel.app/api/devfelipeshimizu.me)
+
+[Acesse o portfólio online](https://www.devfelipeshimizu.me/)
 
 Bem-vindo ao meu portfólio! Este projeto foi desenvolvido com foco em performance, design responsivo e boas práticas de desenvolvimento front-end. Aqui você encontra uma vitrine dos meus projetos, habilidades e formas de contato.
 
