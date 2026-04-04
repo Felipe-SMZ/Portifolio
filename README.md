@@ -1,8 +1,11 @@
+
 # 💼 Portfólio Pessoal – Felipe SMZ
+
+![Deploy Vercel](https://vercelbadge.vercel.app/api/devfelipeshimizu.me)
 
 Bem-vindo ao meu portfólio! Este projeto foi desenvolvido com foco em performance, design responsivo e boas práticas de desenvolvimento front-end. Aqui você encontra uma vitrine dos meus projetos, habilidades e formas de contato.
 
-<!-- ![Banner do Portfólio](https://github.com/Felipe-SMZ/Portifolio/assets/banner-preview.png) <!-- Substitua pelo link correto da imagem no GitHub -->
+<!-- ![Banner do Portfólio](https://github.com/Felipe-SMZ/Portifolio/assets/banner-preview.png) -->
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -31,13 +34,19 @@ npm run dev
 ## 📈 Monitoramento com Vercel Analytics
 Este projeto utiliza o Web Analytics da Vercel para rastrear visualizações de página, tempo de resposta e comportamento dos visitantes. Basta navegar pelo site para gerar eventos. O componente <Analytics /> está integrado ao layout principal.
 
+
 ## 🖼️ Preview
-Você pode acessar o site publicado aqui: 🔗 https://www.devfelipeshimizu.me/
+
+[Acesse o portfólio publicado aqui!](https://www.devfelipeshimizu.me/)
+
+Ou copie e cole no navegador: https://www.devfelipeshimizu.me/
+
 
 ## 📬 Contato
-Entre em contato comigo por aqui:
 
-LinkedIn www.linkedin.com/in/felipesshimizu
+Entre em contato comigo:
+
+- [LinkedIn](https://www.linkedin.com/in/felipesshimizu)
 
 ## 📄 Licença
 Este projeto é de propriedade exclusiva de Felipe SMZ. O uso, reprodução ou modificação do código-fonte ou design está proibido sem autorização expressa do autor. Se você deseja utilizar partes deste projeto como referência ou base para o seu próprio portfólio, entre em contato comigo previamente.
