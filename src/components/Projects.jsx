@@ -4,6 +4,7 @@ import logoImg from '../assets/img/logo.png';
 import javablogImg from '../assets/img/javablog.png';
 import bakerylogoImg from '../assets/img/bakerylogo.png';
 import calculadoraflexImg from '../assets/img/calculadoraflex.png'
+import gamecriticImg from '../assets/img/gamecriticImg.png';
 import { motion } from 'framer-motion';
 
 function Projects() {
@@ -13,7 +14,9 @@ function Projects() {
         3: { gradient: 'from-purple-500/20 to-blue-600/20', border: 'hover:border-purple-500', glow: 'purple-500/30' },
         4: { gradient: 'from-orange-500/20 to-yellow-600/20', border: 'hover:border-orange-500', glow: 'orange-500/30' },
         5: { gradient: 'from-green-500/20 to-emerald-600/20', border: 'hover:border-green-500', glow: 'green-500/30' },
-        6: { gradient: 'from-blue-500/20 to-cyan-600/20', border: 'hover:border-blue-500', glow: 'blue-500/30' }
+        6: { gradient: 'from-blue-500/20 to-cyan-600/20', border: 'hover:border-blue-500', glow: 'blue-500/30' },
+        7: { gradient: 'from-green-500/20 to-cyan-600/20', border: 'hover:border-green-400', glow: 'green-500/30' }
+
     };
 
     const techColors = {
@@ -38,6 +41,27 @@ function Projects() {
     };
 
     const projects = [
+        {
+            id: 7,
+            title: 'Game Critic — Plataforma de Reviews de Jogos',
+            description: 'Aplicação fullstack completa com API REST em Java/Spring Boot e frontend React. Permite cadastro de jogos, autenticação JWT, sistema de reviews por usuário e painel administrativo. Projeto com deploy real em produção — backend no Railway e frontend na Vercel.',
+            technologies: ['React', 'Vite', 'Java', 'Spring Boot', 'JWT', 'MySQL', 'TailwindCSS'],
+            status: 'Concluído',
+            github: 'https://github.com/Felipe-SMZ/jogos-review-api',
+            githubFrontend: 'https://github.com/Felipe-SMZ/jogos-review-frontend',
+            demo: 'https://jogos-review-frontend.vercel.app',
+            highlights: [
+                'Deploy em produção — backend Railway, frontend Vercel',
+                'API REST documentada com Swagger/OpenAPI',
+                'Autenticação JWT com Spring Security',
+                'Sistema de roles ROLE_ADMIN e ROLE_USER',
+                'CI/CD com GitHub Actions + deploy automático na Vercel',
+                'Headers de segurança CSP, HSTS e X-Frame-Options',
+            ],
+            category: 'Full-Stack',
+            image: gamecriticImg,
+            learning: 'Projeto fullstack completo com deploy em produção'
+        },
         {
             id: 1,
             title: 'FatecRide — Plataforma de Caronas Universitárias',
@@ -193,10 +217,10 @@ function Projects() {
 
                                     {/* Card Principal */}
                                     <div className={`relative bg-gray-900/80 backdrop-blur-sm rounded-2xl border border-gray-700 ${colors.border} transition-all duration-300 overflow-hidden`}>
-                                        
+
                                         {/* Grid Layout - Alternado */}
                                         <div className={`grid md:grid-cols-2 gap-8 p-8`}>
-                                            
+
                                             {/* Imagem e Badges - Muda posição */}
                                             <motion.div
                                                 initial={{ opacity: 0, x: isEven ? -30 : 30 }}
