@@ -5,6 +5,7 @@ import javablogImg from '../assets/img/javablog.png';
 import bakerylogoImg from '../assets/img/bakerylogo.png';
 import calculadoraflexImg from '../assets/img/calculadoraflex.png'
 import gamecriticImg from '../assets/img/gamecriticImg.png';
+import deliveryImg from '../assets/img/delivery-api.png';
 import { motion } from 'framer-motion';
 
 function Projects() {
@@ -15,8 +16,8 @@ function Projects() {
         4: { gradient: 'from-orange-500/20 to-yellow-600/20', border: 'hover:border-orange-500', glow: 'orange-500/30' },
         5: { gradient: 'from-green-500/20 to-emerald-600/20', border: 'hover:border-green-500', glow: 'green-500/30' },
         6: { gradient: 'from-blue-500/20 to-cyan-600/20', border: 'hover:border-blue-500', glow: 'blue-500/30' },
-        7: { gradient: 'from-green-500/20 to-cyan-600/20', border: 'hover:border-green-400', glow: 'green-500/30' }
-
+        7: { gradient: 'from-green-500/20 to-cyan-600/20', border: 'hover:border-green-400', glow: 'green-500/30' },
+        8: { gradient: 'from-yellow-500/20 to-orange-600/20', border: 'hover:border-yellow-500', glow: 'yellow-500/30' }
     };
 
     const techColors = {
@@ -61,6 +62,26 @@ function Projects() {
             category: 'Full-Stack',
             image: gamecriticImg,
             learning: 'Projeto fullstack completo com deploy em produção'
+        },
+        {
+            id: 8,
+            title: 'Sistema de Delivery — Arquitetura de Microsserviços com Kafka',
+            description: 'Sistema de delivery com arquitetura orientada a eventos, onde a criação de um pedido dispara um fluxo assíncrono entre 4 microsserviços independentes via Apache Kafka. Cada serviço tem seu próprio banco de dados, garantindo isolamento total e resiliência — falhas em serviços secundários não impactam o fluxo principal.',
+            technologies: ['Java', 'Spring Boot', 'MySQL', 'Docker'],
+            status: 'Em Desenvolvimento',
+            github: 'https://github.com/Felipe-SMZ/delivery-order-service',
+            githubFrontend: null,
+            demo: null,
+            highlights: [
+                '4 microsserviços independentes comunicando via Apache Kafka',
+                'Cada serviço com banco de dados próprio (database per service)',
+                'Idempotência implementada nos consumers e na API REST',
+                'Docker Compose com Kafka, Zookeeper e MySQL',
+                'Fluxo completo: pedido → restaurante → entregador → notificação',
+            ],
+            category: 'Backend',
+            image: deliveryImg,
+            learning: 'Mensageria com Kafka, microsserviços e arquitetura orientada a eventos'
         },
         {
             id: 1,
