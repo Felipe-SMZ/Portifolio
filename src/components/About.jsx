@@ -3,7 +3,7 @@ import avatarImg from '../assets/img/avatar.jpg';
 
 function About() {
     const stats = [
-        { value: 'Desde 2022', label: 'Programando' },
+        { value: 'Desde 2024', label: 'Programando' },
         { value: '15+', label: 'Tecnologias' },
         { value: '12+', label: 'Projetos' },
         { value: '100%', label: 'Dedicação' },
